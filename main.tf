@@ -41,6 +41,10 @@ resource "aws_route_table_association" "a" {
 
 ### Compute
 
+output "test" {
+  "${aws_subnet.main.*.id}"
+}
+
 resource "aws_autoscaling_group" "app" {
   name                 = "tf-test-asg"
   vpc_zone_identifier  = ["${aws_subnet.main.*.id}"]
