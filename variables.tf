@@ -32,7 +32,7 @@ variable "asg_desired" {
   default     = "1"
 }
 
-variable "service_desired" `{
+variable "service_desired" {
   description = "Desired numbers of instances in the ecs service"
   default     = "1"
 }
